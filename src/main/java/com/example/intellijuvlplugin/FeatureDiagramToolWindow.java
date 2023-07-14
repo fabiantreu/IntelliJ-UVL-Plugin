@@ -1,9 +1,8 @@
-package com.example.exampleplugin;
+package com.example.intellijuvlplugin;
 
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowFactory;
-import com.intellij.openapi.ui.Messages;
 
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -15,11 +14,10 @@ import javafx.scene.text.Text;
 import javafx.scene.layout.*;
 import javafx.scene.shape.*;
 import javafx.scene.input.*;
-import javafx.event.*;
 
 import org.jetbrains.annotations.NotNull;
 
-public class ToolWindowJavaFX implements ToolWindowFactory {
+public class FeatureDiagramToolWindow implements ToolWindowFactory {
 
     Group root = new Group();
     @Override

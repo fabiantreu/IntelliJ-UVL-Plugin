@@ -5,4 +5,4 @@ pluginManagement {
     }
 }
 
-rootProject.name = "example-plugin"
+rootProject.name = "IntelliJ-UVL-Plugin"

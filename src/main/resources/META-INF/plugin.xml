@@ -1,20 +1,20 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>com.example.example-plugin</id>
+    <id>com.example.intellijuvlplugin</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>Example-plugin</name>
+    <name>UVL Support</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+    <vendor email="fabian.treu@student.tugraz.at">TU Graz</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-        Example Plugin Using JavaFX in a tool window
+        Plugin to support UVL (Universal Variability Language)
         ]]>
     </description>
 
@@ -27,6 +27,6 @@
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow
                 id="JavaFX Window"
-                factoryClass="com.example.exampleplugin.ToolWindowJavaFX"/>
+                factoryClass="com.example.intellijuvlplugin.FeatureDiagramToolWindow"/>
     </extensions>
 </idea-plugin>
