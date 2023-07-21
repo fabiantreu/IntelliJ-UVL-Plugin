@@ -21,6 +21,7 @@
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.ultimate</depends>
 
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
@@ -28,5 +29,7 @@
         <toolWindow
                 id="JavaFX Window"
                 factoryClass="com.example.intellijuvlplugin.FeatureDiagramToolWindow"/>
+        <platform.lsp.serverSupportProvider
+                implementation="com.example.intellijuvlplugin.UvlLspServerSupportProvider"/>
     </extensions>
 </idea-plugin>
