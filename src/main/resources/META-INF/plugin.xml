@@ -26,10 +26,19 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow
-                id="JavaFX Window"
-                factoryClass="com.example.intellijuvlplugin.FeatureDiagramToolWindow"/>
-        <platform.lsp.serverSupportProvider
-                implementation="com.example.intellijuvlplugin.UvlLspServerSupportProvider"/>
+<!--        <toolWindow-->
+<!--                id="JavaFX Window"-->
+<!--                factoryClass="com.example.intellijuvlplugin.FeatureDiagramToolWindow"/>-->
+<!--        <platform.lsp.serverSupportProvider-->
+<!--                implementation="com.example.intellijuvlplugin.UvlLspServerSupportProvider"/>-->
+        <fileType
+                name="UVL file"
+                implementationClass="com.example.intellijuvlplugin.language.UVLFileType"
+                fieldName="INSTANCE"
+                language="UVL"
+                extensions="uvl"/>
+        <lang.syntaxHighlighterFactory
+                language="UVL"
+                implementationClass="com.example.intellijuvlplugin.language.UVLSyntaxHightlighterFactory"/>
     </extensions>
 </idea-plugin>

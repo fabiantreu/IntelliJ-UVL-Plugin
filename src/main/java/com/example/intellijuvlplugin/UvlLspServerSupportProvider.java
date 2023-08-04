@@ -19,7 +19,7 @@ public class UvlLspServerSupportProvider implements LspServerSupportProvider {
 
 class UvlLspServerDescriptor extends ProjectWideLspServerDescriptor {
     public UvlLspServerDescriptor(Project project) {
-        super(project, "Uvl");
+        super(project, "UVL");
     }
 
     @Override
