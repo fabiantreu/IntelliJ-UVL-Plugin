@@ -18,15 +18,6 @@ dependencies {
     implementation("org.antlr:antlr4-intellij-adaptor:0.1")
 }
 
-
-//sourceSets {
-//    main{
-//        java{
-//            srcDir("src/main/antlr/generated")
-//        }
-//    }
-//}
-
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
@@ -65,7 +56,7 @@ tasks {
         token.set(System.getenv("PUBLISH_TOKEN"))
     }
 
-//    generateGrammarSource {
-//        arguments = arguments + listOf("-package")
-//    }
+    generateGrammarSource {
+        arguments = arguments + listOf("-package", "com.example.intellijuvlplugin.language.parser")
+    }
 }

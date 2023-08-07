@@ -2,10 +2,6 @@ grammar UVL;
 
 tokens { INDENT, DEDENT }
 
-@header {
-  package com.example.intellijuvlplugin.language.parser;
-}
-
 @lexer::members {
   // A queue where extra tokens are pushed on (see the NEWLINE lexer rule).
   private java.util.LinkedList<Token> tokens = new java.util.LinkedList<>();
