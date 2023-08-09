@@ -326,7 +326,7 @@
  *
  *  Generate the parser via "mvn compile" from root dir of project.
  */
-grammar UVL;
+grammar UVL; // CHANGED FROM SIMPLE TO UVL TO MAKE IT WORK WITH UVL CODE
 
 /** The start rule must be whatever you would normally use, such as script
  *  or compilationUnit, etc...
