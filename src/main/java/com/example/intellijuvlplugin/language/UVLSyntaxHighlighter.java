@@ -18,6 +18,9 @@ public class UVLSyntaxHighlighter extends SyntaxHighlighterBase {
     public static final TextAttributesKey STRING =
             createTextAttributesKey("UVL_STRING", DefaultLanguageHighlighterColors.STRING);
 
+    public static final TextAttributesKey COMMENT =
+            createTextAttributesKey("UVL_COMMENT", DefaultLanguageHighlighterColors.LINE_COMMENT);
+
     static {
         PSIElementTypeFactory.defineLanguageIElementTypes(UVLLanguage.INSTANCE,
                 UVLParser.tokenNames,
@@ -39,8 +42,11 @@ public class UVLSyntaxHighlighter extends SyntaxHighlighterBase {
         int ttype = myType.getANTLRTokenType();
         TextAttributesKey attrKey;
         switch ( ttype ) {
-            case UVLLexer.STRING :
-                attrKey = STRING;
+//            case UVLLexer.STRING:
+//                attrKey = STRING;
+//                break;
+            case UVLLexer.COMMENT:
+                attrKey = COMMENT;
                 break;
             default :
                 return EMPTY_KEYS;

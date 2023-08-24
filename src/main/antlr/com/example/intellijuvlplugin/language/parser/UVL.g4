@@ -312,11 +312,6 @@
 
 
 
-
-
-
-
-
 /** A simple language for use with this sample plugin.
  *  It's C-like but without semicolons. Symbol resolution semantics are
  *  C-like: resolve symbol in current scope. If not in this scope, ask
@@ -326,7 +321,7 @@
  *
  *  Generate the parser via "mvn compile" from root dir of project.
  */
-grammar UVL; // CHANGED FROM SIMPLE TO UVL TO MAKE IT WORK WITH UVL CODE
+grammar UVL; // CHANGED TO MAKE IT WORK WITH MY CODE
 
 /** The start rule must be whatever you would normally use, such as script
  *  or compilationUnit, etc...
@@ -455,3 +450,112 @@ WS : [ \t\n\r]+ -> channel(HIDDEN) ;
 ERRCHAR
 	:	.	-> channel(HIDDEN)
 	;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///*
+// * High Performance Knowledge Based Configuration Techniques
+// *
+// * Copyright (c) 2022-2023
+// *
+// * @author: Viet-Man Le (vietman.le@ist.tugraz.at)
+// */
+//
+//grammar UVL;
+////import CommonLexer;
+//
+//@lexer::header {
+//}
+//
+///*********************************************
+// * KEYWORDS
+// **********************************************/
+//
+//FM4CONFversion : 'FM4Conf-v1.0';
+//
+//MODELNAME : 'MODEL';
+//FEATURE : 'FEATURES';
+//RELATIONSHIP : 'RELATIONSHIPS';
+//CONSTRAINT : 'CONSTRAINTS';
+//
+//MANDATORY : 'mandatory';
+//OPTIONAL : 'optional';
+//ALTERNATIVE : 'alternative';
+//OR : 'or';
+//REQUIRES : 'requires';
+//EXCLUDES : 'excludes';
+//
+////DD:'..';
+////DO:'.';
+//CM:',';
+//
+////PL:'+';
+////MN:'-';
+//SC:';';
+//CL:':';
+////DC:'::';
+//LP:'(';
+//RP:')';
+//
+///*********************************************
+// * GENERAL
+// **********************************************/
+//
+//NAME : ID ( SPACE ID )* ;
+//
+//COMMENT
+//    :   '%' ~('\n'|'\r')* '\n' -> skip
+//    ;
+//
+//WS  :   ( ' '
+//        | '\t'
+//        | '\r'
+//        | '\n'
+//        ) -> skip
+//    ; // toss out whitespace
+//
+///*********************************************
+// * FRAGMENTS
+// **********************************************/
+//
+//fragment ID : ID_HEAD ID_TAIL* ;
+//fragment ID_HEAD : LETTER ;
+//fragment ID_TAIL : LETTER | DIGIT;
+//fragment LETTER : [a-zA-Z_-] ;
+//fragment DIGIT : [0-9] ;
+//fragment SPACE : ' '+ ;
+//
+//model : fm4confver modelname feature? relationship? constraint?;
+//
+//fm4confver : FM4CONFversion;
+//
+//modelname : MODELNAME CL identifier;
+//
+//feature : FEATURE CL identifier (CM identifier)*;
+//
+//relationship: RELATIONSHIP CL relationshiprule (CM relationshiprule)*;
+//
+//constraint: CONSTRAINT CL constraintrule (CM constraintrule)*;
+//
+//identifier: NAME;
+//
+//relationshiprule : MANDATORY LP identifier CM identifier RP         # mandatory
+//                 | OPTIONAL LP identifier CM identifier RP          # optional
+//                 | ALTERNATIVE LP identifier (CM identifier)+ RP    # alternative
+//                 | OR LP identifier (CM identifier)+ RP             # or
+//                 ;
+//
+//constraintrule : REQUIRES LP identifier CM identifier RP            # requires
+//                 | EXCLUDES LP identifier CM identifier RP          # excludes
+//                 ;
