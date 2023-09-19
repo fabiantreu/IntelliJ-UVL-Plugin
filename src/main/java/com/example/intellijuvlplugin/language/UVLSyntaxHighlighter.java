@@ -42,12 +42,12 @@ public class UVLSyntaxHighlighter extends SyntaxHighlighterBase {
         int ttype = myType.getANTLRTokenType();
         TextAttributesKey attrKey;
         switch ( ttype ) {
-//            case UVLLexer.STRING:
-//                attrKey = STRING;
-//                break;
-            case UVLLexer.COMMENT:
-                attrKey = COMMENT;
+            case UVLLexer.STRING:
+                attrKey = STRING;
                 break;
+//            case UVLLexer.COMMENT:
+//                attrKey = COMMENT;
+//                break;
             default :
                 return EMPTY_KEYS;
         }
